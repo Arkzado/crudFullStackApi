@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aprendiz</title>
+    <script type="module" src="./src/js/aprendiz.js"></script>
+    <link rel="stylesheet" href="./src/scss/style.scss" />
+  </head>
+  <body>
+    <div class="container mt-4 p-3 bg-body rounded shadow">
+      <table class="table">
+        <thead>
+          <button type="button" class="btn btn-success" id="btnModal">
+            Crear Aprendiz
+          </button>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalAprendiz"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="tituloModal">
+              Crear Aprendiz
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="frmAprendiz">
+              <div class="mb-3">
+                <label for="nombreAprendiz" class="form-label"
+                  >Nombre Aprendiz</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreAprendiz"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="apellidoAprendiz" class="form-label"
+                  >Apellido Aprendiz</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="apellidoAprendiz"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="correoAprendiz" class="form-label"
+                  >Correo Aprendiz</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="correoAprendiz"
+                  required
+                />
+              </div>
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success col-12" id="btnGuardar" style="display: none;">Guardar</button>
+            <button type="button" class="btn btn-warning col-12" id="btnEditar" style="display: none;">Editar</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

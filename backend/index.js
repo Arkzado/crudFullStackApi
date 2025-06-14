@@ -1,9 +1,11 @@
 import express from "express";
 import aprendiz from "./src/aprendiz.js";
 import ficha from "./src/ficha.js";
+import cors from "cors";
 
 let appAprendiz = express();
 appAprendiz.use(express.json());
+appAprendiz.use(cors());
 appAprendiz.use("/", aprendiz);
 
 appAprendiz.get("/", (request, response) => {
@@ -20,6 +22,7 @@ appAprendiz.listen(puertoAprendiz, async() => {
 let appFicha = express();
 appFicha.use(express.json());
 appFicha.use("/", ficha);
+appFicha.use(cors());
 
 appFicha.get("/", (request, response) => {
     response.send("hola mundo de tetas");

@@ -1,6 +1,7 @@
 import express, { request, response } from "express";
 import connection from "../conexion.js";
 
+
 let ficha = express.Router();
 
 ficha.get("/ficha/listarFichas", async (request, response) => {
